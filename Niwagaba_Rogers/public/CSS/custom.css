@@ -12,10 +12,65 @@ body {
 }
 
 
-button {
-  background-color: #0070c0;
-}
+
 
 h6 {
   font-size: medium;
+}
+/* 
+.names {
+  padding: 5px;
+  /* margin: 5px; */
+  display: flex;
+}
+.birthResidence {
+  /* padding: 10px;
+  margin: 5px; */
+  display: flex;
+}
+
+/* 
+.names {
+  padding: 5px;
+  /* margin: 5px; */
+  display: flex;
+}
+.gender {
+  /* padding: 10px;
+  margin: 5px; */
+  display: flex;
+}
+
+/* .occupationNationality {
+  /* padding: 10px;
+  margin: 5px;  */
+  display: flex;
+}
+
+.gender {
+  /* padding: 10px;
+  margin: 5px;  */
+  display: flex;
+}  */
+
+.category {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+} */
+
+
+
+.register {
+  max-width: 330px;
+  padding: 15px;  
+  margin: 0 auto;
+}
+.register .btn {
+  flex: 1 0 100%;
+  background-color: #0070c0;
+}
+
+.success {
+  background-color: green;
 }

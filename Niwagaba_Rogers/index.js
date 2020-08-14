@@ -1,6 +1,8 @@
 //configuring the express web app
 const express = require('express');
 const app = express();
+// requiring the database models
+require('./model/patientsDetails');
 
 const bodyParser = require('body-parser');
 
@@ -9,9 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
+const registration = mongoose.model('registration');
 
-const url = 'mongodb://localhost:27017/Patients';
-const path = require('path');
+
+
+const url = 'mongodb://localhost:27017/patients';
 
 app.use(express.static('public'));
 
@@ -31,13 +35,29 @@ mongoose.connection.on('open', () => {
       console.log(`Connection error: ${err.message}`);
 });
 
+
 //Routes
 app.get('/', (req, res) => {
     res.render('home');
 })
 
-// requiring the database models
-require('./model/patientsDetails');
+
+//  input patients to the database from the forms
+app.post('/', async(req, res) =>{
+  try {
+    const addpatient = new registration(req.body);
+    console.log(req.body);
+    await addpatient.save();
+    res.render('success')
+  } catch (err) {
+    res.send('Sorry, we were not able to register the patient');
+    console.log(err);
+  }
+});
+
+app.get('*', (req, res) => {
+  res.send('Error. This page doesnt exist on this planet');
+  })
 
 //server
 const server = app.listen(3000, () => {

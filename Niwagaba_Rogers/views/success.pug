@@ -8,6 +8,7 @@ head
   link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
   link(rel='stylesheet' href='/CSS/custom.css')
   script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous")
+  script(src='/JS/validate.js' charset='utf-8')
 header
   .uganda-images
     img(src='/images/form-header-image.png' alt='')
@@ -15,30 +16,33 @@ header
     h6 Ministry of Health
     h2 COVID-19 (CORONA VIRUS)
     h6 Virus-Test Registration Form
+
+    .success 
+    |   Registratios was successful!
 .register-form
   form.register(action='/' method='post')
     .names
       label(for='surname') Surname
-      input(type='text' name='surname')
+      input(type='text' name='surname' value='surname')
       label(for='givenName') Given name
-      input(type='text' name='givenName')
+      input(type='text' name='givenName' value='givenName')
     .birthResidence
       label(for='dateOfBirth') Date Of Birth
-      input(type='date' name='dateOfBirth')
+      input(type='date' name='dateOfBirth' value='dateOfBirth')
       label(for='placeOfResidence') Place Of Residence
-      input(type='text' name='placeOfResidence')
+      input(type='text' name='placeOfResidence' value='placeOfResidence')
     .occupationNationality
       label(for='occupation') Occupation
-      input(type='text' name='occupation')
+      input(type='text' name='occupation' value='occupation')
       label(for='nationality') Nationality
-      input(type='text' name='nationality')
+      input(type='text' name='nationality' value='nationality')
     .gender
       | Gender
       hr
-      input#male(type='radio' name='male')
+      input#male(type='radio' name='male' value='male')
       label(for='male') Male
       br
-      input#female(type='radio' name='female')
+      input#female(type='radio' name='female' value='female')
       label(for='female') Female
       br
     .category
@@ -49,5 +53,4 @@ header
         option(value='2') Contact
         option(value='3') Alert
         option(value='4') Volunteer
-    button(class='btn' type='submit' name='button' onmouseover= 'validator()') Register
-    script(src='/JS/validate.js' charset='utf-8')
+    button(class='btn' type='submit' name='button') Register

@@ -7,7 +7,7 @@ const nationality = document.getElementByName('nationality');
 var genderM= document.getElementByName('male');
 var genderF= document.getElementByName('female');
 
-const validator = (form) => {
+const validator = () => {
     // Validating the product name
     // creating a regular expression
     var charactersOnly = /^[A-Za-z]+$/;
