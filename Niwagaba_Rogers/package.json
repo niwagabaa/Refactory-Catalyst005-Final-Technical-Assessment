@@ -1,0 +1,28 @@
+{
+  "name": "niwagaba-rogers",
+  "version": "1.0.0",
+  "description": "Virus-Test Registration form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment.git"
+  },
+  "author": "Rogers Niwagaba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment/issues"
+  },
+  "homepage": "https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.29",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
