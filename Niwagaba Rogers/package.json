@@ -1,0 +1,19 @@
+{
+  "name": "niwagaba-rogers",
+  "version": "1.0.0",
+  "description": "Virus-Test Registration form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment.git"
+  },
+  "author": "Rogers Niwagaba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment/issues"
+  },
+  "homepage": "https://github.com/niwagabaa/Refactory-Catalyst005-Final-Technical-Assessment#readme"
+}
